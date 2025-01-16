@@ -20,6 +20,5 @@ public class BooleanDemoExample {
     public static void main(String args[]) {
         String booleanOutput = bool();
         System.out.println(booleanOutput);
-
     }
 }

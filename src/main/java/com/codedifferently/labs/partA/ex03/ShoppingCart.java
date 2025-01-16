@@ -18,13 +18,20 @@ public class ShoppingCart {
 
 
         // Declare outOfStock variable and initialize it
+        boolean outOfStock = false;
 
 
         // Test quantity and modify message if quantity > 1.
-
+        if (quantity > 1) {
+            message += "s"; // Add 's' to make it plural
+        }
 
         // Test outOfStock and notify user in either case.
-
+        if (outOfStock) {
+            response = "Sorry, " + itemDesc + " is currently out of stock.";
+        } else {
+            response = message + ". Total cost with tax: $" + total;
+        }
 
         return response;
     }
@@ -34,5 +41,4 @@ public class ShoppingCart {
     public static void main(String[] args) {
         String shopOutput = shopping();
         System.out.println(shopOutput);
-
     }}

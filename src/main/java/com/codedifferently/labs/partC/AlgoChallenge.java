@@ -13,8 +13,10 @@ public class AlgoChallenge {
      */
 
     public static Boolean startWithIx(String phrase) {
-
-        return null;
+        if(phrase.length() >= 3 && phrase.substring(1, 3).equals("ix")) {
+            return true;
+        }
+        return false;
     }
 
      /* Problem 1
@@ -29,8 +31,25 @@ public class AlgoChallenge {
      */
 
     public static Integer near10(int one, int two){
+        int first = Math.abs(10 - one);
+        int sec = Math.abs(10 - two);
 
-        return null;
+        if (first < sec) {
+            return one;
+        } else if (sec < first) {
+            return two;
+        }
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(startWithIx("mix snacks"));
+        System.out.println(startWithIx("pix snacks"));
+        System.out.println(startWithIx("piz snacks"));
+
+        System.out.println(near10(8, 13));
+        System.out.println(near10(13, 8));
+        System.out.println(near10(13, 7));
     }
 
 }

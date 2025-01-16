@@ -7,8 +7,8 @@ public class EqualityOperator {
         String num2 = "5";
 
         /* Your code goes here*/
-
-
+        response += "Are "+num1+" and " +num1+" equal? "+ (num1 == num1) + "\n";
+        response += "Are "+num1 +" and " +num2 +" equal? "+ (num1 == num2);
         return response;
     }
     public static void main(String args[]) {
